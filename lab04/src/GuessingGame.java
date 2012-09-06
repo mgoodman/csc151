@@ -28,11 +28,7 @@ public class GuessingGame {
 		return "I  am thinking of a number between " + min + " and " + max + ".";
 	}
 	
-	public String getWinner(int guess1, int guess2) {
-		if (guess1 == guess2) {
-			return "It was a tie!";
-		}
-		
+	public String getWinner(int guess1, int guess2) {		
 		if (guess1 > max || guess1 < min) {
 			if (guess2 > max || guess2 < min) {
 				return "Neither of you win!";
@@ -40,6 +36,10 @@ public class GuessingGame {
 			return "Player 2 wins by default!";
 		} else if (guess2 > max || guess2 < min) {
 			return "Player 1 wins by default!";
+		}
+		
+		if (guess1 == guess2) {
+			return "It was a tie!";
 		}
 		
 		if (Math.abs(correctNumber - guess1) < Math.abs(correctNumber - guess2)) {

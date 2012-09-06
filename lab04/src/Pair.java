@@ -10,7 +10,16 @@ public class Pair {
 		String number2 = JOptionPane.showInputDialog("Enter your second number (double): ");
 		
 		this.number1 = Double.parseDouble(number1);
-		this.number2 = Double.parseDouble(number2); 
+		this.number2 = Double.parseDouble(number2);
+		
+		System.out.println("Sum: " + this.sum());
+		System.out.println("Difference: " + this.difference());
+		System.out.println("Product: " + this.product());
+		System.out.println("Average: " + this.average());
+		System.out.println("Distance: " + this.distance());
+		System.out.println("Maximum: " + this.maximum());
+		System.out.println("Minimum: " + this.minimum());
+		System.out.println("Remainder: " + this.remainder());
 	}
 	
 	public double sum() {

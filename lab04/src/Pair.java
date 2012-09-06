@@ -1,12 +1,16 @@
+import javax.swing.JOptionPane;
 
 public class Pair {
 
 	private double number1;
 	private double number2;
 	
-	public Pair(double number1, double number2) {
-		this.number1 = number1;
-		this.number2 = number2;
+	public Pair() {
+		String number1 = JOptionPane.showInputDialog("Enter your first number (double): ");
+		String number2 = JOptionPane.showInputDialog("Enter your second number (double): ");
+		
+		this.number1 = Double.parseDouble(number1);
+		this.number2 = Double.parseDouble(number2); 
 	}
 	
 	public double sum() {

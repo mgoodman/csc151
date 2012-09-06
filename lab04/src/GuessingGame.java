@@ -33,9 +33,9 @@ public class GuessingGame {
 			if (guess2 > max || guess2 < min) {
 				return "Neither of you win!";
 			}
-			return "Player 2 wins by default!";
+			return "Player 2 wins!";
 		} else if (guess2 > max || guess2 < min) {
-			return "Player 1 wins by default!";
+			return "Player 1 wins!";
 		}
 		
 		if (guess1 == guess2) {
@@ -50,7 +50,7 @@ public class GuessingGame {
 	}
 	
 	public String getSolution() {
-		return "The number was " + correctNumber;
+		return "The number is: " + correctNumber;
 	}
 	
 }

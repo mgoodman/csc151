@@ -22,10 +22,10 @@ public class Card {
 		prefixes.put("q", "Queen");
 		prefixes.put("k", "King");
 		
-		suffixes.put("s", "Spades");
-		suffixes.put("c", "Clubs");
-		suffixes.put("h", "Hearts");
-		suffixes.put("d", "Diamonds");
+		suffixes.put("s", "spades");
+		suffixes.put("c", "clubs");
+		suffixes.put("h", "hearts");
+		suffixes.put("d", "diamonds");
 		
 		this.notation = notation;
 	}
@@ -38,7 +38,7 @@ public class Card {
 		suffix = suffixes.get(suffix);
 		
 		if (prefix == null || suffix == null) {
-			return "Invalid Notation.";
+			return "Unknown";
 		} else {
 			return prefix + " of " + suffix;
 		}

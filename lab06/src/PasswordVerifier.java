@@ -19,10 +19,25 @@ public class PasswordVerifier {
         }
     }
 	
-	public void strengthen() {
-		Random r = new Random();
-		while (!this.isValid()) {
-			
+	public void strengthen() {		
+		if (!this.isValid()) {
+			Random r = new Random();
+		
+			for (int i = 0; i < r.nextInt(15) + 10 || !this.isValid(); i++) {
+				int type = r.nextInt(3);
+				
+				switch (type) {
+				case 0:
+					password.append((char) (r.nextInt(26) + 65));
+					break;
+				case 1:
+					password.append((char) (r.nextInt(26) + 97));
+					break;
+				case 2:
+					password.append(r.nextInt(10));
+					break;
+				}
+			}
 		}
 	}
 	
